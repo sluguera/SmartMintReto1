@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'BDEmpresa',
   connector: 'mongodb',
-  url: 'mongodb+srv://sluguer:Scheveningen@218@cluster0.0ssogtv.mongodb.net/test',
-  host: '0.0.0.0',
-  port: 0,
-  user: '00',
-  password: '00',
-  database: '0',
+  url: 'mongodb+srv://sluguer:Scheveningen218@cluster0.0ssogtv.mongodb.net/?retryWrites=true&w=majority',  
+  host: '',
+  port: '',
+  user: '',
+  password: '',
+  database: '',
   useNewUrlParser: true
 };
 
