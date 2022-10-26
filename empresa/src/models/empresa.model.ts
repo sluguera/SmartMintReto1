@@ -6,6 +6,13 @@ export class Empresa extends Entity {
     type: 'string',
     required: true,
   })
+  id: string;
+
+
+  @property({
+    type: 'string',
+    required: true,
+  })
   Nombre: string;
 
   @property({

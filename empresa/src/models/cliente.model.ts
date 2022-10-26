@@ -6,6 +6,12 @@ export class Cliente extends Entity {
     type: 'string',
     required: true,
   })
+  id: string;
+  
+  @property({
+    type: 'string',
+    required: true,
+  })
   telefono: string;
 
 
