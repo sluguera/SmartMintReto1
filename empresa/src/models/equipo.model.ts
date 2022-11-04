@@ -2,7 +2,7 @@ import {Entity, model, property, belongsTo} from '@loopback/repository';
 import {Ordenservicio} from './ordenservicio.model';
 
 @model()
-export class Empresa extends Entity {
+export class Equipo extends Entity {
   @property({
     type: 'string',
     id: true,
@@ -16,16 +16,32 @@ export class Empresa extends Entity {
   })
   nombre: string;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  marca: string;
+
+  @property({
+    type: 'string',
+  })
+  serie?: string;
+
+  @property({
+    type: 'string',
+  })
+  modelo?: string;
+
   @belongsTo(() => Ordenservicio)
   ordenservicioId: string;
 
-  constructor(data?: Partial<Empresa>) {
+  constructor(data?: Partial<Equipo>) {
     super(data);
   }
 }
 
-export interface EmpresaRelations {
+export interface EquipoRelations {
   // describe navigational properties here
 }
 
-export type EmpresaWithRelations = Empresa & EmpresaRelations;
+export type EquipoWithRelations = Equipo & EquipoRelations;
